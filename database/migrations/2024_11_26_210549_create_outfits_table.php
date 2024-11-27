@@ -12,9 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('outfits', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id(); // Llave primaria
+            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Relación con usuarios
+            $table->string('name'); // Nombre del outfit
+            $table->string('image_path')->nullable(); // Ruta de la imagen del outfit (opcional)
+            $table->timestamps(); // Campos created_at y updated_at
         });
+        
     }
 
     /**

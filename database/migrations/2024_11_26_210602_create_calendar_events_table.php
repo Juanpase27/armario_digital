@@ -12,8 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('calendar_events', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id(); // Llave primaria
+            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Relación con usuarios
+            $table->foreignId('outfit_id')->nullable()->constrained()->onDelete('set null'); // Relación con outfits (opcional)
+            $table->date('event_date'); // Fecha del evento
+            $table->string('description')->nullable(); // Descripción del evento (opcional)
+            $table->timestamps(); // Campos created_at y updated_at
         });
     }
 

@@ -16,7 +16,7 @@ class GarmentSeeder extends Seeder
         Garment::create([
             'user_id' => 1, // Asegúrate de que el usuario con ID 1 existe
             'name' => 'Camiseta Roja',
-            'category' => 'Camisetas',
+            'category_id' => 1,
             'color' => 'Rojo',
             'image_path' => 'path/to/image1.jpg',
         ]);
@@ -24,7 +24,7 @@ class GarmentSeeder extends Seeder
         Garment::create([
             'user_id' => 1,
             'name' => 'Pantalón Azul',
-            'category' => 'Pantalones',
+            'category_id' => 2,
             'color' => 'Azul',
             'image_path' => 'path/to/image2.jpg',
         ]);
@@ -32,7 +32,7 @@ class GarmentSeeder extends Seeder
         Garment::create([
             'user_id' => 1,
             'name' => 'Chaqueta Negra',
-            'category' => 'Abrigos',
+            'category_id' => 1,
             'color' => 'Negro',
             'image_path' => 'path/to/image3.jpg',
         ]);

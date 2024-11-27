@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('outfit_garment', function (Blueprint $table) {
+        Schema::create('garment_usage_history', function (Blueprint $table) {
             $table->id(); // Llave primaria
-            $table->foreignId('outfit_id')->constrained()->onDelete('cascade'); // Relación con outfits
+            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Relación con usuarios
             $table->foreignId('garment_id')->constrained()->onDelete('cascade'); // Relación con prendas
+            $table->date('used_on'); // Fecha de uso
             $table->timestamps(); // Campos created_at y updated_at
         });
-        
     }
 
     /**
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('outfit_garments');
+        Schema::dropIfExists('garment_usage_histories');
     }
 };

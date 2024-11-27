@@ -13,7 +13,12 @@ return new class extends Migration
     {
         Schema::create('garments', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // Relación con la tabla users
+            $table->foreignId('category_id')->constrained('garment_categories')->onDelete('restrict'); // Relación con garment_categories
+            $table->string('name'); // Nombre de la prenda
+            $table->string('color')->nullable(); // Color de la prenda
+            $table->string('image_path')->nullable(); // Ruta de la imagen
+            $table->timestamps(); // created_at y updated_at
         });
     }
 
