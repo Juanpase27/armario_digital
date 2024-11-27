@@ -13,9 +13,11 @@ Route::view('/', 'welcome');
 Route::view('login', 'login')->name('login')->middleware('guest');
 Route::view('dashboard', 'dashboard')->middleware('auth');
 Route::resource('garments', GarmentController::class);
+Route::resource('outfits', OutfitController::class);
 
 Route::post('login', [LoginController::class, 'login']);
 Route::post('logout', [LoginController::class, 'logout']);
+/*
 Route::middleware(['auth'])->group(function () {
     Route::resource('garments', GarmentController::class);
     Route::resource('outfits', OutfitController::class);
@@ -23,9 +25,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('garment-usage-history', GarmentUsageHistoryController::class);
     Route::resource('notifications', NotificationController::class);
 });
-
-// Rutas de outfits
-Route::resource('outfits', OutfitController::class);
+*/
 
 // Rutas de eventos del calendario
 Route::resource('calendar-events', CalendarEventController::class);

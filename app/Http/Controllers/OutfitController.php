@@ -13,7 +13,9 @@ class OutfitController extends Controller
     }*/
     public function index()
     {
-        $outfits = Outfit::where('id', auth()->id())->get();
+        $outfits = Outfit::with('garments')->get();
+
+        // Retornar la vista con los datos
         return view('outfits.index', compact('outfits'));
     }
 

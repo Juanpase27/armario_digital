@@ -13,6 +13,10 @@ class GarmentController extends Controller
     }*/
     public function index()
     {
+        return "Hello";
+    }
+    /*public function index()
+    {
         $garments = Garment::where('id', auth()->id())->get();
         return view('garments.index', compact('garments'));
     }
@@ -66,5 +70,5 @@ class GarmentController extends Controller
     {
         $garment->delete();
         return redirect()->route('garments.index')->with('success', 'Prenda eliminada con éxito.');
-    }
+    }*/
 }
