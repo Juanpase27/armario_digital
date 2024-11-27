@@ -18,8 +18,9 @@ class Garment extends Model
 
     public function category()
     {
-        return $this->belongsTo(GarmentCategory::class, 'category_id');
+        return $this->belongsTo(GarmentCategory::class);
     }
+
 
     public function outfits()
     {
