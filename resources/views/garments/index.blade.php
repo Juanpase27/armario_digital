@@ -1,4 +1,3 @@
-@include('partials.nav')
 @extends('layouts.app')
 
 @section('content')
@@ -10,7 +9,7 @@
         @if ($garments->isEmpty())
             <p class="text-gray-700">No tienes prendas registradas. ¡Empieza agregando algunas!</p>
         @else
-            <div class="overflow-x-auto">
+            <div class="overflow-x-auto mt-4">
                 <table class="min-w-full bg-white border border-gray-300 rounded-lg shadow-md">
                     <thead>
                         <tr class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">

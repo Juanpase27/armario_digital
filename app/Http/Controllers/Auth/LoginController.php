@@ -20,7 +20,7 @@ class LoginController extends Controller
             request()->session()->regenerate();
             #return redirect('dashboard');
             return redirect()
-                ->intended('dashboard')
+                ->intended('outfits')
                 ->with('status', 'Estás logeado');
         }
         return redirect('login');

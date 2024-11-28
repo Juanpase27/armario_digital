@@ -1,4 +1,3 @@
-@include('partials.nav')
 @extends('layouts.app')
 
 @section('content')

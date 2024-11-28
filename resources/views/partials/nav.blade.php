@@ -1,9 +1,9 @@
 <nav class="bg-gray-800 p-4">
     <div class="container mx-auto flex justify-between items-center">
         <div class="flex space-x-4">
-            <a href="/" class="text-white hover:bg-gray-700 px-3 py-2 rounded transition">Inicio</a>
             @auth
-                <a href="/dashboard" class="text-white hover:bg-gray-700 px-3 py-2 rounded transition">Dashboard</a>
+                <!--<a href="/" class="text-white hover:bg-gray-700 px-3 py-2 rounded transition">Inicio</a>
+                    <a href="/dashboard" class="text-white hover:bg-gray-700 px-3 py-2 rounded transition">Dashboard</a>-->
                 <a href="/garments" class="text-white hover:bg-gray-700 px-3 py-2 rounded transition">Garments</a>
                 <a href="/outfits" class="text-white hover:bg-gray-700 px-3 py-2 rounded transition">Outfits</a>
                 <a href="/garment_categories" class="text-white hover:bg-gray-700 px-3 py-2 rounded transition">Garment

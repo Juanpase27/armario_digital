@@ -21,7 +21,7 @@
 </head>
 
 <body class="bg-gray-100">
-    <!-- Incluir la barra de navegación -->
+    @include('partials.nav')
     
 
     <div class="container mx-auto p-6">
